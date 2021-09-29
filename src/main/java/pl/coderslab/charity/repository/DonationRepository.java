@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import pl.coderslab.charity.model.Donation;
 
 @Repository
-public interface DonationRepository extends JpaRepository<Donation,Long> {
+public interface DonationRepository extends JpaRepository<Donation, Long> {
 
     @Query("select sum(d.quantity) from Donation d")
     int sumQuantity();

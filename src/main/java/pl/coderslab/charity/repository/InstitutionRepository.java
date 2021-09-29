@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import pl.coderslab.charity.model.Institution;
 
 @Repository
-public interface InstitutionRepository extends JpaRepository<Institution,Long> {
+public interface InstitutionRepository extends JpaRepository<Institution, Long> {
 }

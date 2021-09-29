@@ -22,15 +22,16 @@ public class HomeController {
     public Collection<Institution> institutions() {
         return this.institutionService.findAll();
     }
+
     @ModelAttribute("totalQuantity")
     public int totalQuantity() {
         return this.donationService.totalQuantity();
     }
+
     @ModelAttribute("numberOfDonations")
     public int numberOfDonations() {
         return this.donationService.numberOfDonations();
     }
-
 
 
     @RequestMapping("/")
