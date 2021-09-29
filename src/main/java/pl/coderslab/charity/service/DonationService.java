@@ -8,4 +8,8 @@ import pl.coderslab.charity.repository.DonationRepository;
 @AllArgsConstructor
 public class DonationService {
     DonationRepository donationRepository;
+
+    public int totalQuantity(){
+        return donationRepository.sumQuantity();
+    }
 }
