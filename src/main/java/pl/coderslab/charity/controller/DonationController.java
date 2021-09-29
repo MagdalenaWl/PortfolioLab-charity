@@ -47,9 +47,8 @@ public class DonationController {
     }
 
     @PostMapping("")
-    public String checkDonation(@Valid Donation donation, BindingResult result, @RequestParam int[] categories) {
+    public String checkDonation(@Valid Donation donation, BindingResult result) {
         log.info(donation.toString());
-        log.info(Arrays.stream(categories).mapToObj(n -> n + "").collect(Collectors.joining(", ")));
         return "redirect:/";
     }
 }

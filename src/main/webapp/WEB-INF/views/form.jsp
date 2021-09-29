@@ -23,17 +23,15 @@
     </div>
 
     <div class="form--steps-container">
-        <div class="form--steps-counter">Krok
-            <span data-step="1" class="active">1</span>
-            <span data-step="2">2</span>
-            <span data-step="3">3</span>
-            <span data-step="4">4</span>
-            /4
-        </div>
+
 
         <form:form method="post" modelAttribute="donation">
+
             <!-- STEP 1: class .active is switching steps -->
             <div data-step="1" class="active">
+                <div class="form--steps-counter">
+                    Krok <span>1</span>/4
+                </div>
                 <h3>Zaznacz co chcesz oddać:</h3>
 
 
@@ -78,6 +76,9 @@
 
             <!-- STEP 2 -->
             <div data-step="2">
+                <div class="form--steps-counter">
+                    Krok <span>2</span>/4
+                </div>
                 <h3>Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:</h3>
 
                 <div class="form-group form-group--inline">
@@ -94,8 +95,11 @@
             </div>
 
 
-            <!-- STEP 4 -->
+            <!-- STEP 3 -->
             <div data-step="3">
+                <div class="form--steps-counter">
+                    Krok <span>3</span>/4
+                </div>
                 <h3>Wybierz organizacje, której chcesz pomóc:</h3>
 
                 <div class="form-group form-group--checkbox">
@@ -132,8 +136,11 @@
                 </div>
             </div>
 
-            <!-- STEP 5 -->
+            <!-- STEP 4 -->
             <div data-step="4">
+                <div class="form--steps-counter">
+                    Krok <span>4</span>/4
+                </div>
                 <h3>Podaj adres oraz termin odbioru rzecz przez kuriera:</h3>
 
                 <div class="form-section form-section--columns">
