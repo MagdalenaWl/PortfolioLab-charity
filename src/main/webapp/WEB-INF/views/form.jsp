@@ -42,7 +42,7 @@
                         <label>
                             <input type="checkbox" name="categories" class="checkbox" value="${category.id}"/>
 
-                            <span class="checkbox"/>
+                            <span class="checkbox"></span>
                             <span class="description">${category.name}</span>
                         </label>
                     </div>
