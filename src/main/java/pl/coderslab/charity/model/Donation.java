@@ -2,6 +2,7 @@ package pl.coderslab.charity.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ import java.util.List;
 @Table(name = "donations")
 @Getter
 @Setter
+@ToString
 public class Donation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
