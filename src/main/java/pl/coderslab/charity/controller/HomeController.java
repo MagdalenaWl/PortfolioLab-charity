@@ -15,8 +15,8 @@ import java.util.Collection;
 @Controller
 @AllArgsConstructor
 public class HomeController {
-    private InstitutionService institutionService;
-    private DonationService donationService;
+    private final InstitutionService institutionService;
+    private final DonationService donationService;
 
     @ModelAttribute("institutions")
     public Collection<Institution> institutions() {

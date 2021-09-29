@@ -16,9 +16,9 @@ import java.util.Collection;
 @AllArgsConstructor
 @RequestMapping("/donation")
 public class DonationController {
-    private DonationService donationService;
-    private InstitutionService institutionService;
-    private CategoryService categoryService;
+    private final  DonationService donationService;
+    private final InstitutionService institutionService;
+    private final CategoryService categoryService;
 
     @ModelAttribute("institutions")
     public Collection<Institution> institutions() {

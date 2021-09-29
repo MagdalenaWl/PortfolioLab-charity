@@ -7,7 +7,7 @@ import pl.coderslab.charity.repository.DonationRepository;
 @Service
 @AllArgsConstructor
 public class DonationService {
-    DonationRepository donationRepository;
+    private final DonationRepository donationRepository;
 
     public int totalQuantity() {
         return donationRepository.sumQuantity();
