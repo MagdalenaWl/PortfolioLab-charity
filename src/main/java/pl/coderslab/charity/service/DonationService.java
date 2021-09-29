@@ -12,4 +12,8 @@ public class DonationService {
     public int totalQuantity(){
         return donationRepository.sumQuantity();
     }
+
+    public int numberOfDonations() {
+        return donationRepository.findAll().size();
+    }
 }

@@ -26,6 +26,11 @@ public class HomeController {
     public int totalQuantity() {
         return this.donationService.totalQuantity();
     }
+    @ModelAttribute("numberOfDonations")
+    public int numberOfDonations() {
+        return this.donationService.numberOfDonations();
+    }
+
 
 
     @RequestMapping("/")
