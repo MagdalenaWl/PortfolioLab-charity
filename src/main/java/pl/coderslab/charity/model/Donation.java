@@ -6,6 +6,7 @@ import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -26,8 +27,11 @@ public class Donation {
     private List<Category> categories;
     @ManyToOne
     private Institution institution;
+    @NotBlank
     private String street;
+    @NotBlank
     private String city;
+    @NotBlank
     private String zipCode;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate pickUpDate;

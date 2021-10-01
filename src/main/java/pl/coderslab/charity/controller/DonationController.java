@@ -48,7 +48,11 @@ public class DonationController {
 
     @PostMapping("")
     public String checkDonation(@Valid Donation donation, BindingResult result) {
+        if (result.hasErrors()) {
+            return "form";
+        }
         log.info(donation.toString());
+        donationService.save(donation);
         return "redirect:/";
     }
 }

@@ -26,6 +26,7 @@
 
 
         <form:form method="post" modelAttribute="donation">
+            <small><form:errors cssClass="text-danger"/></small>
 
             <!-- STEP 1: class .active is switching steps -->
             <div data-step="1" class="active">
