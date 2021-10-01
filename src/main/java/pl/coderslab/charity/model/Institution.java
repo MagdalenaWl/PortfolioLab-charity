@@ -2,6 +2,7 @@ package pl.coderslab.charity.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -9,6 +10,7 @@ import javax.persistence.*;
 @Table(name = "institutions")
 @Getter
 @Setter
+@ToString
 public class Institution {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
