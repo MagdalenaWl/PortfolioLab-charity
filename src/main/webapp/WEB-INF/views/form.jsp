@@ -45,29 +45,6 @@
                         </label>
                     </div>
                 </c:forEach>
-                    <%--                <div class="form-group form-group--checkbox">--%>
-                    <%--                    <label>--%>
-                    <%--                        <input type="checkbox" name="categories" value="toys"/>--%>
-                    <%--                        <span class="checkbox"></span>--%>
-                    <%--                        <span class="description">zabawki</span>--%>
-                    <%--                    </label>--%>
-                    <%--                </div>--%>
-
-                    <%--                <div class="form-group form-group--checkbox">--%>
-                    <%--                    <label>--%>
-                    <%--                        <input type="checkbox" name="categories" value="books"/>--%>
-                    <%--                        <span class="checkbox"></span>--%>
-                    <%--                        <span class="description">książki</span>--%>
-                    <%--                    </label>--%>
-                    <%--                </div>--%>
-
-                    <%--                <div class="form-group form-group--checkbox">--%>
-                    <%--                    <label>--%>
-                    <%--                        <input type="checkbox" name="categories" value="other"/>--%>
-                    <%--                        <span class="checkbox"></span>--%>
-                    <%--                        <span class="description">inne</span>--%>
-                    <%--                    </label>--%>
-                    <%--                </div>--%>
 
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn next-step">Dalej</button>
@@ -84,7 +61,8 @@
                 <div class="form-group form-group--inline">
                     <label>
                         Liczba 60l worków:
-                        <input type="number" name="bags" step="1" min="1"/>
+<%--                        <input type="number" name="bags" step="1" min="1"/>--%>
+                        <form:input type="number" step="1" min="1" path="quantity"/>
                     </label>
                 </div>
 
