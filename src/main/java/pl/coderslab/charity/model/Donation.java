@@ -23,7 +23,7 @@ public class Donation {
     private Long id;
     private Integer quantity;
     @ManyToMany
-    @Size(min=1)
+    @Size(min = 1)
     private List<Category> categories;
     @ManyToOne
     private Institution institution;

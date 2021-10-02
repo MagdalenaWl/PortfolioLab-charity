@@ -106,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
             this.$stepInstructions = form.querySelectorAll(".form--steps-instructions p");
             const $stepForms = form.querySelectorAll("form > div");
             this.slides = [...this.$stepInstructions, ...$stepForms];
-
             this.init();
         }
 
@@ -150,7 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
          */
         updateForm() {
             this.$step.innerText = this.currentStep;
-
             // TODO: Validation
 
             this.slides.forEach(slide => {
@@ -165,9 +163,24 @@ document.addEventListener("DOMContentLoaded", function () {
             this.$step.parentElement.hidden = this.currentStep >= 5;
 
             // TODO: get data from inputs and show them in summary
+            let summaryText = document.querySelector("#quantity").value + " worki ";
+            summaryText += Array.from(document.querySelectorAll("#categories:checked"))
+                .map(el => el.parentElement.querySelector(".description").innerText)
+                .join(", ");
+            document.querySelector("#quantity-category").innerHTML = summaryText;
+            let foundation = document.querySelector("#institution:checked").parentElement.querySelector("div.title").innerText;
+            document.querySelector("#foundation").innerText = foundation;
+
+            document.querySelector("#date").innerText = document.querySelector('#pickUpDate').value;
+            document.querySelector("#time").innerText = document.querySelector('#pickUpTime').value;
+            document.querySelector("li#street").innerText = document.querySelector('#street').value;
+            document.querySelector("li#city").innerText = document.querySelector('#city').value;
+            document.querySelector("li#code").innerText = document.querySelector('#zipCode').value;
+            document.querySelector("li#comment").innerText = document.querySelector('#pickUpComment').value;
         }
 
     }
+
 
     const form = document.querySelector(".form--steps");
     if (form !== null) {
